@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clean Containers') {
             steps {
-                sh 'docker compose --project-name project-cloud down --remove-orphans'
+                sh 'docker compose --project-name project-cloud down frontend user-service recipe-service rating-service favorite-service api-gateway reverse-proxy'
             }
         }
 
