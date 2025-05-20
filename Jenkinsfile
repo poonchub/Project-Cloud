@@ -15,7 +15,7 @@ pipeline {
 
         stage('Start Containers') {
             steps {
-                sh 'docker compose up -d frontend user-service recipe-service rating-service favorite-service api-gateway reverse-proxy'
+                sh 'docker compose up -d'
             }
         }
 
