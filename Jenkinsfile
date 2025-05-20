@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clean Containers') {
             steps {
-                sh 'docker compose down --remove-orphans'
+                sh 'docker compose down'
             }
         }
 
