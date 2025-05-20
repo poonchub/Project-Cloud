@@ -1,6 +1,12 @@
 pipeline {
     agent any
     stages {
+        stage('Clean Containers') {
+            steps {
+                sh 'docker compose down --remove-orphans'
+            }
+        }
+
         stage('Build Frontend and Services') {
             steps {
                 sh 'docker compose build frontend user-service recipe-service rating-service favorite-service api-gateway reverse-proxy'
